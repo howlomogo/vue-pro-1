@@ -23,6 +23,7 @@
                 <div class="p-4">
                     <button class="bg-indigo-600 rounded px-4 py-2 border border-transparent rounded-md text-white hover:bg-indigo-500">
                         View Profile
+                        
                     </button>
                 </div>
             </div>
