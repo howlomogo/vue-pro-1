@@ -1,24 +1,4 @@
 # vue-proj-1
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Small project for fetching users / displaying user info
+- Fetching ALL users will be done on '/users' via https://jsonplaceholder.typicode.com/users
+- Fetching individual users will be done on '/user/:id/', technically you could pass props to this route. However this would require you to go through the link on the '/users' view first to be able to pass the props through and not be able to access the data from hitting the url directly. Also this is more how the set up would be in a real world environment as usually you wouldn't normally have all this info available on a list of users request.

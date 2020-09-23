@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import About from '../views/About'
 import Users from '../views/Users'
+import User from '../views/User'
+import NotFound from '../views/NotFound'
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,20 @@ const routes = [
       path: '/users',
       name: 'Users',
       component: Users
+  },
+  {
+      path: '/user/:id',
+      name: 'User',
+      component: User
+  },
+  {
+      // Redirect to /users
+      path: '/user',
+      redirect: '/users'
+  },
+  {
+      path: '*',
+      component: NotFound
   }
 ]
 

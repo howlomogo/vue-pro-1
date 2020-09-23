@@ -8,31 +8,19 @@
             There was an Error fetching the users
         </div>
         <div v-else class="flex flex-wrap justify-center">
-            <!-- User component -->
-            <div v-for="user in users"
+            <UserTile
+                v-for="user in users"
                 v-bind:key="user.id"
+                v-bind:user="user"
                 class="flex-grow w-64 bg-gray-100 border-gray-200 m-2 border rounded-md shadow-sm text-center"
-            >
-                <div class="p-4 border-b border-gray-200">
-                    <h5 class="font-semibold text-gray-700">{{ user.name }}</h5>
-                </div>
-                <div class="p-4 border-b border-gray-200">
-                    <p class="font-thin text-sm">{{ user.email }}</p>
-                    <p class="mb-0 font-thin text-sm">{{ user.phone }}</p>
-                </div>
-                <div class="p-4">
-                    <button class="bg-indigo-600 rounded px-4 py-2 border border-transparent rounded-md text-white hover:bg-indigo-500">
-                        View Profile
-                        
-                    </button>
-                </div>
-            </div>
+            />
         </div>
     </div>
 </template>
 
 <script>
 import LoadingBtn from '../components/Loadingbtn'
+import UserTile from '../components/UserTile'
 
 export default {
     name: 'Users',
@@ -44,7 +32,8 @@ export default {
         }
     },
     components: {
-        LoadingBtn
+        LoadingBtn,
+        UserTile
     },
     created: function() {
         this.loading = true
